@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Table id="idtable" items="{/results}">
+		<columns>
+			<Column>
+				<ObjectIdentifier title="PRODUCT ID"/>
+			</Column>
+			<Column>
+				<ObjectIdentifier title="PRODUCT NAME"/>
+			</Column>
+			<Column>
+				<ObjectIdentifier title="QUANTITY PERUNIT"/>
+			</Column>
+			<Column>
+				<ObjectIdentifier title="PRICE"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<Text text="{ProductID}"/>
+				<Text text="{ProductName}"/>
+				<Text text="{QuantityPerUnit}"/>
+				<Text text="{UnitPrice}"/>
+			</ColumnListItem>
+		</items>
+	</Table>
+	<Bar design="SubHeader">
+		<contentMiddle>
+			<Button type="Emphasized" id="previous" press="onPrevious" icon="sap-icon://arrow-left"></Button>
+			<Button type="Emphasized" id="next" press="onNext" icon="sap-icon://arrow-right"></Button>
+		</contentMiddle>
+	</Bar>
+</core:FragmentDefinition>
